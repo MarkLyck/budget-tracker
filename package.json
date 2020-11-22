@@ -5,9 +5,21 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "storybook": "start-storybook -p 7007"
   },
   "dependencies": {
+    "@ant-design/react-native": "^4.0.6",
+    "@emotion/native": "^11.0.0",
+    "@emotion/react": "^11.1.1",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/cameraroll": "^4.0.1",
+    "@react-native-community/picker": "^1.8.1",
+    "@react-native-community/segmented-control": "^2.2.1",
+    "@react-native-community/slider": "^3.0.3",
+    "@react-native-community/viewpager": "^4.2.0",
+    "antd-mobile": "^2.3.4",
+    "date-fns": "^2.16.1",
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
@@ -17,9 +29,17 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@storybook/addon-actions": "^5.3",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.23",
+    "@storybook/react-native": "^5.3.23",
+    "@storybook/react-native-server": "^5.3.23",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "babel-loader": "^8.2.1",
     "typescript": "~3.9.5"
   },
   "private": true
