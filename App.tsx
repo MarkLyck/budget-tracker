@@ -1,6 +1,6 @@
 import Storybook from './storybook'
-import App from './src/App'
+import AppProvider from './src/lib/AppProvider'
 
 const STORYBOOK = false
 
-export default STORYBOOK ? Storybook : App
+export default STORYBOOK ? Storybook : AppProvider

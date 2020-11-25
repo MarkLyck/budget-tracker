@@ -1,10 +1,11 @@
 import React from 'react'
-import { Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import theme from '../lib/theme'
 import SpendingScreen from '../screens/Spending'
+import SettingsScreen from '../screens/Settings'
+import LoginScreen from '../screens/Login'
 
 const Tab = createBottomTabNavigator();
 
@@ -48,7 +49,8 @@ const TabBar = () => {
                 }}
             >
                 <Tab.Screen name="Spending" component={SpendingScreen} />
-                {/* <Tab.Screen name="Settings" component={SpendingScreen} /> */}
+                <Tab.Screen name="Settings" component={SettingsScreen} />
+                <Tab.Screen name="Login" component={LoginScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     )
