@@ -4,7 +4,8 @@ import { KeyboardAvoidingView, } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import styled from '@emotion/native'
 // import TabBar from './components/TabBar'
-import AuthScreen from './screens/AuthScreen'
+// import AuthScreen from './screens/AuthScreen'
+import TransactionScreen from './screens/TransactionScreen'
 
 const SafeView = styled.View`
     padding-top: ${(p: any) => p.paddingTop};
@@ -19,7 +20,7 @@ const App = () => {
         <KeyboardAvoidingView>
             <SafeView paddingTop={insets.top}>
                 <StatusBar style="auto" />
-                <AuthScreen />
+                <TransactionScreen />
             </SafeView>
         </KeyboardAvoidingView>
     )
