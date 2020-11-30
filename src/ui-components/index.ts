@@ -1,2 +1,3 @@
 export * from './ActionButton'
-export * from './CategoryIcon'
+export * from './Category'
+export * from './LoadingIndicator'

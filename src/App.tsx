@@ -5,6 +5,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import styled from '@emotion/native'
 // import TabBar from './components/TabBar'
 // import AuthScreen from './screens/AuthScreen'
+// import LoginScreen from './screens/Authentication/LoginScreen'
+// import SignupScreen from './screens/Authentication/SignUpScreen'
 import TransactionScreen from './screens/TransactionScreen'
 
 const SafeView = styled.View`

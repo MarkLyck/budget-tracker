@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/native'
 import { useMutation } from '@apollo/client'
-import { USER_SIGNUP, USER_LOGIN } from '../common/queries'
-import { ActionButton } from '../ui-components'
+import { USER_SIGNUP, USER_LOGIN } from '../../common/queries'
+import { ActionButton } from '../../ui-components'
 
 const Container = styled.View`
     display: flex;
