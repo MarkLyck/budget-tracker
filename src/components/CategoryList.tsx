@@ -14,10 +14,19 @@ const CategoryItem = styled(Category)`
     margin: 0px;
 `
 
-const CategoryList = () => {
+interface CategoryListType {
+    onChange: (category: any) => void
+}
+
+const CategoryList = ({ onChange }: CategoryListType) => {
     const { data, loading } = useQuery(GET_CATEGORIES)
 
     if (loading) return <LoadingIndicator />
+
+    const handleCategory = (category: any) => {
+        console.log('PRESS!', category)
+        onChange(category)
+    }
 
     return (
         <Container>
@@ -25,7 +34,7 @@ const CategoryList = () => {
                 data={data.categoriesList.items}
                 hasLine={false}
                 columnNum={3}
-                renderItem={(category) => <CategoryItem category={category} />}
+                renderItem={(category) => <CategoryItem category={category} onPress={() => handleCategory(category)} />}
                 itemStyle={{
                     display: 'flex',
                     alignItems: 'center',

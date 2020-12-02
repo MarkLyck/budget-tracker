@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from '@emotion/native'
 import CategoryIcon from './CategoryIcon'
+import { TouchableOpacity } from 'react-native';
 
 export * from './CategoryIcon'
+export * from './CategorySelect'
 
 const CATEGORY_SIZE = '100'
 
@@ -33,9 +35,11 @@ interface CategoryType {
     onClick?: any
 }
 
-export const Category = ({ category, onClick }: CategoryType) => (
-    <Container background={category.color} onClick={onClick}>
-        <Title>{category.name}</Title>
-        <CategoryIcon icon={category.icon} />
-    </Container>
+export const Category = ({ category, onPress }: CategoryType) => (
+    <TouchableOpacity onPress={onPress} >
+        <Container background={category.color} >
+            <Title>{category.name}</Title>
+            <CategoryIcon icon={category.icon} />
+        </Container>
+    </TouchableOpacity>
 )

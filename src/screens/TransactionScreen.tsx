@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/native'
 import BudgetOverview from '../components/BudgetOverview'
 import CategoryList from '../components/CategoryList'
+import { CategorySelect, ValueInput } from '../ui-components'
 
 const ScreenContainer = styled.View`
     display: flex;
@@ -21,30 +22,20 @@ height: 100%;
 
 `
 
-const ChosenCategoryContainer = styled.View`
-background: yellow;
-padding: 16px 40px;
-border-radius: 24px;
-position: absolute;
-align-self: center;
-transform: translateY(-24px);
+const StyledCategorySelect = styled(CategorySelect)`
+    transform: translateY(-24px);
 `
-
-const ChosenCategory = styled.Text`
-    font-weight: bold;
-    font-size: 16px;
-`
-
 
 const TransactionScreen = () => {
+    const [category, setCategory] = useState(undefined)
+
     return (
-        <ScreenContainer style={{ borderTopRightRadius: '400px' }} >
+        <ScreenContainer>
             <BudgetOverview />
             <Content>
-                <ChosenCategoryContainer>
-                    <ChosenCategory>Expense</ChosenCategory>
-                </ChosenCategoryContainer>
-                <CategoryList />
+                <StyledCategorySelect category={category} />
+                <ValueInput value="123" onChange={console.log} />
+                <CategoryList onChange={setCategory} />
             </Content>
             {/* Optional: Choose type */}
 
